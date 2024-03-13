@@ -21,3 +21,15 @@ const data = [
     price: "6$",
   },
 ];
+
+const mostSoldDesserts = data.map((dessert) => {
+  return {
+    content: `${dessert.title} - ${dessert.description}`,
+    price: dessert.price,
+  };
+});
+
+export default function App() {
+  console.log(mostSoldDesserts);
+  return <h1>Examine the console output</h1>;
+}
