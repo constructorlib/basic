@@ -22,14 +22,23 @@ const data = [
   },
 ];
 
-const mostSoldDesserts = data.map((dessert) => {
-  return {
-    content: `${dessert.title} - ${dessert.description}`,
-    price: dessert.price,
-  };
-});
+// Basic map display
+// const mostSoldDesserts = data.map((dessert) => {
+//   return {
+//     content: `${dessert.title} - ${dessert.description}`,
+//     price: dessert.price,
+//   };
+// });
 
-export default function App() {
-  console.log(mostSoldDesserts);
-  return <h1>Examine the console output</h1>;
+function App() {
+  const ListItems = data.map((dessert) => {
+    const displayedItem = `${dessert.title} - ${dessert.price}`;
+    return <li>{displayedItem}</li>;
+  });
+  // console.log(mostSoldDesserts);
+  return (
+    <div>
+      <ul>{ListItems}</ul>
+    </div>
+  );
 }
