@@ -13,7 +13,7 @@ function check_length(arr) {
   if (arr.length === 3) {
     console.log(sum_three(arr));
   } else if (arr.length < 3) {
-    console.log("Fuck me");
+    console.log("Array length less than 3");
   }
 }
 check_length([1, 2, 3]);
